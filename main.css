@@ -1,0 +1,414 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ----- content view styles ----- */
+.contentWrapper {
+	font-family: "Open Sans" !important;
+	color: #5b5b5b;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.contentWrapper .nextButton {
+	float: right;
+	margin-top: 25px;
+	background-color: #ffbc42;
+	color: #fff;
+	border-radius: 30px;
+	padding: 7px 25px;
+	border: none;
+	font-weight: 400;
+}
+
+.contentWrapper .nextButton:hover {
+	background-color: #FFB329;
+}
+
+.contentWrapper .nextButton:focus {
+	outline: none;
+}
+
+/* log in view */
+.contentWrapper .view {
+	padding-top: 75px;
+	padding-bottom: 75px;
+}
+
+.contentWrapper .view1 {
+	background-image: url('assets/background.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.contentWrapper .titleWrapper {
+	text-align: center;
+}
+
+.contentWrapper .titleWrapper img {
+	width: 800px;
+	margin-top: 125px;
+	margin-bottom: 20px;
+}
+
+.contentWrapper .instructions {
+	color: #fff;
+	font-size: 26px;
+	line-height: 32px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.contentWrapper .inputWrapper {
+	text-align: center;
+}
+
+.contentWrapper .formBlock {
+	display: block;
+	width: 430px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contentWrapper .loginInput {
+	height: 42px;
+	padding-left: 50px;
+	width: 100%;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+	outline: none;
+	margin-bottom: 15px;
+	background-color: #fff;
+}
+
+.contentWrapper .loginInput:focus {
+	border: 1px solid #bbb;
+}
+
+.contentWrapper .inputIcon {
+	position: absolute;
+	width: 16px;
+	margin-top: 12px;
+	margin-left: 17px;
+}
+
+.contentWrapper .errorWrapper {
+	display: none;
+	text-align: left;
+	margin-top: -15px;
+}
+
+.contentWrapper .alertIcon {
+	width: 13px;
+	margin-left: 12px;
+	margin-right: 5px;
+}
+
+.contentWrapper .err-name, .contentWrapper .err-mbox {
+	margin-bottom: 15px;
+	margin-top: -10px;
+	font-size: 13px;
+	color: #fff;
+	font-weight: 400;
+	display: inline-block;
+}
+
+.contentWrapper .startSession {
+	background-color: #ffbc42;
+	color: #fff;
+	border-radius: 30px;
+	padding: 7px 45px;
+	border: none;
+	height: 45px;
+	font-weight: 600;
+}
+
+.contentWrapper .startSession:hover {
+	background-color: #FFB329;
+}
+
+.contentWrapper .startSession:focus {
+	outline: none;
+}
+
+/* content view */
+.contentWrapper .sectionTitle {
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+.contentWrapper hr {
+	width: 40px;
+}
+
+.contentWrapper .groupTitle {
+	font-weight: 700;
+	margin-top: 30px;
+	margin-bottom: 0px;
+}
+
+.contentWrapper .contentText {
+	line-height: 27px;
+}
+
+.contentWrapper .placesList li img {
+	width: 100%;
+}
+
+.contentWrapper .placesList .liLabel {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.contentWrapper .compActivity {
+	font-weight: 400;
+	margin-top: 25px;
+	color: #218380;
+	font-size: 20px;
+}
+
+.contentWrapper .musubiPic {
+	width: 100%;
+	cursor: pointer;
+}
+
+/* quiz view */
+.contentWrapper .radioInput {
+	margin-right: 5px;
+}
+
+.contentWrapper .compQuestion {
+	margin-right: 10px;
+	margin-bottom: 2px;
+}
+
+.contentWrapper .qErrorWrapper {
+	display: none;
+}
+
+.contentWrapper .qError {
+	color: #d81159;
+	font-size: 13px;
+}
+
+.contentWrapper .compUl {
+	margin-top: 15px;
+	margin-bottom: 35px;
+	margin-left: 25px;
+}
+
+.contentWrapper label {
+	font-weight: 300;
+}
+
+/* completion view */
+.contentWrapper .completeText {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.contentWrapper .completeButton {
+	background-color: #ffbc42;
+	color: #fff;
+	border-radius: 30px;
+	padding: 7px 45px;
+	border: none;
+	height: 45px;
+	font-weight: 600;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contentWrapper .completeButton:hover {
+	background-color: #FFB329;
+}
+
+.contentWrapper .completeButton:focus {
+	outline: none;
+}
+
+/* ----- report view styles ----- */
+.reportWrapper {
+	font-family: 'Open Sans' !important;
+}
+
+.reportWrapper .container {
+	margin-top: 75px;
+}
+
+.reportWrapper h1 {
+	margin-bottom: 30px;
+}
+
+.reportWrapper .groupTitle {
+	font-weight: 700;
+	margin-top: 30px;
+}
+
+.reportWrapper .rowTemplate {
+	margin-bottom: 15px;
+}
+
+.reportWrapper .statementDate {
+	font-size: 11px;
+	color: #bbb;
+	margin-top: 4px;
+}
+
+.reportWrapper .refreshButton {
+	background-color: #ffbc42;
+	color: #fff;
+	border-radius: 30px;
+	padding: 7px 25px;
+	border: none;
+	font-weight: 400;
+}
+
+.reportWrapper .refreshButton:hover {
+	background-color: #FFB329;
+}
+
+.reportWrapper .refreshButton:focus {
+	outline: none;
+}
+
+.reportWrapper .dashboardBlock {
+	min-height: 125px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 10px;
+}
+
+.reportWrapper hr {
+	margin-top: 75px;
+	margin-bottom: 75px;
+}
+
+.reportWrapper .filterWrapper {
+	margin-bottom: 0px;
+}
+
+.reportWrapper .filterInput {
+	height: 42px;
+	padding-left: 15px;
+	width: 430px;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+	outline: none;
+	margin-bottom: 5px;
+	background-color: #fff;
+}
+
+.reportWrapper .filterInput:focus {
+	border: 1px solid #bbb;
+}
+
+.reportWrapper .filterButton {
+	background-color: #ffbc42;
+	color: #fff;
+	border-radius: 30px;
+	padding: 7px 25px;
+	border: none;
+	font-weight: 400;
+}
+
+.reportWrapper .filterButton:hover {
+	background-color: #FFB329;
+}
+
+.reportWrapper .filterError {
+	color: #ff0000;
+	margin-bottom: 5px;
+	font-size: 10px;
+	display: none;
+}
+
+.reportWrapper .noFilterResults {
+	display: none;
+}
+
+@media (max-width: 1199px) {
+	/*.contentWrapper .titleWrapper img {
+		width: 800px;
+		margin-top: 125px;
+		margin-bottom: 20px;
+	}*/
+}
+
+@media (max-width: 991px) {
+	.contentWrapper .titleWrapper img {
+		width: 600px;
+		margin-top: 125px;
+		margin-bottom: 20px;
+	}
+	.contentWrapper .instructions {
+		font-size: 22px;
+		line-height: 32px;
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 767px) {
+	.contentWrapper .titleWrapper img {
+		width: 100%;
+		margin-top: 100px;
+		margin-bottom: 20px;
+	}
+	.contentWrapper .instructions {
+		font-size: 18px;
+		line-height: 26px;
+		margin-bottom: 30px;
+	}
+	.contentWrapper .formBlock {
+		width: 100%;
+	}
+}
