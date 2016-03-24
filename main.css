@@ -400,8 +400,11 @@ table {
 @media (max-width: 767px) {
 	.contentWrapper .titleWrapper img {
 		width: 100%;
-		margin-top: 100px;
+		margin-top: 70px;
 		margin-bottom: 20px;
+	}
+	.contentWrapper .titleBreak {
+		display: none;
 	}
 	.contentWrapper .instructions {
 		font-size: 18px;
