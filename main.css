@@ -69,13 +69,17 @@ table {
 	margin-bottom: 15px;
 }
 
-.modal button {
+.modal a {
 	padding: 13px 25px;
 	border-radius: 25px;
 	color: #fff;
 	border: none;
 	font-weight: 400;
 	margin-bottom: 10px;
+}
+
+.modal a:hover {
+	text-decoration: none;
 }
 
 .modal .toPortfolioButton {
@@ -157,6 +161,10 @@ table {
 	line-height: 32px;
 	text-align: center;
 	margin-bottom: 30px;
+	width: 510px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .contentWrapper .inputWrapper {
@@ -305,6 +313,7 @@ table {
 .contentWrapper .completeText {
 	text-align: center;
 	margin-bottom: 40px;
+	font-size: 24px;
 }
 
 .contentWrapper .completeButton {
@@ -452,11 +461,7 @@ table {
 }
 
 @media (max-width: 1199px) {
-	/*.contentWrapper .titleWrapper img {
-		width: 800px;
-		margin-top: 125px;
-		margin-bottom: 20px;
-	}*/
+
 }
 
 @media (max-width: 991px) {
@@ -468,7 +473,7 @@ table {
 	.contentWrapper .instructions {
 		font-size: 22px;
 		line-height: 32px;
-		margin-bottom: 30px;
+		width: 430px;
 	}
 	.reportWrapper .dashboardBlock {
 		margin-bottom: 15px;
@@ -484,16 +489,36 @@ table {
 		margin-top: 85px;
 		margin-bottom: 20px;
 	}
-	.contentWrapper .titleBreak {
-		display: none;
-	}
 	.contentWrapper .instructions {
 		font-size: 18px;
 		line-height: 26px;
-		margin-bottom: 30px;
+		width: 100%;
 	}
 	.contentWrapper .formBlock {
 		width: 100%;
+	}
+	.contentWrapper .placesList li {
+		margin-bottom: 45px;
+	}
+	.contentWrapper .nextButton {
+		margin-top: -5px;
+	}
+	.modal .modal-body {
+		padding: 30px;
+	}
+	.modal .completionText {
+		margin-bottom: 35px;
+	}
+	.modal .toReportButton {
+		margin-right: 0;
+	}
+	.modal .toPortfolioButton {
+		display: block;
+		margin-top: 25px;
+		width: 225px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 30px;
 	}
 	.reportWrapper .filterInput {
 		width: 100%;

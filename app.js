@@ -1,4 +1,4 @@
-var app = $('.tinCanTutorial'), name, mbox, lrs;
+var app = $('.tinCanTutorial'), name, mbox, lrs, score = 0, comment = "";
 
 // lets you test a block of code for errors
 try {
@@ -90,6 +90,10 @@ function retrieveStatements() {
 			}
 		}
 	});
+}
+
+function calculateScore() {
+
 }
 
 // set guide initial hash
@@ -188,6 +192,23 @@ app.find('.nextButton4').on('click', function() {
 			q2Val = $("input[name=q2]:checked").val(),
 			q3Val = $("input[name=q3]:checked").val();
 
+		if (q1Val === 'Japan') {
+			score++;
+		}
+		if (q2Val === 'Roots') {
+			score++;
+		}
+		if (q3Val === 'Carnivals') {
+			score++;
+		}
+		if (score < 2) {
+			comment = "Sorry, next time.";
+		} else if (score === 2) {
+			comment = "You're almost there!";
+		} else if (score === 3) {
+			comment = "Great job!";
+		}
+
 		var file1 = "http://summermichiko.github.io/tinCanTutorial/index.html#Hawaii_Food_Guide_Quiz_Question1_with_'" + q1Val + "'";
 		saveStatement(name, mbox, 'http://adlnet.gov/expapi/verbs/answered', file1);
 		var file2 = "http://summermichiko.github.io/tinCanTutorial/index.html#Hawaii_Food_Guide_Quiz_Question2_with_'" + q2Val + "'";
@@ -195,7 +216,8 @@ app.find('.nextButton4').on('click', function() {
 		var file3 = "http://summermichiko.github.io/tinCanTutorial/index.html#Hawaii_Food_Guide_Quiz_Question3_with_'" + q3Val + "'";
 		saveStatement(name, mbox, 'http://adlnet.gov/expapi/verbs/answered', file3);
 		changeView(thisView, nextView);
-		window.location.hash = "guide_quiz";
+		window.location.hash = "guide_completion";
+		$('.completeText').text('You got ' + score + '/3 correct. ' + comment);
 	}
 });
 
@@ -208,20 +230,4 @@ app.find('.nextButton5').on('click', function() {
 		keyboard: false
 	});
 });
-
-// to report from modal
-app.on('click', '.toReportButton', function() {
-	window.open('http://summermichiko.github.io/gfExample/report.html#guide_report', '_blank');
-});
-
-
-// to portfolio from modal
-app.on('click', '.toPortfolioButton', function() {
-	window.open('http://summermcdonald.me/', '_blank');
-});
-
-
-
-
-
 
