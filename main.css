@@ -47,6 +47,60 @@ table {
 	border-spacing: 0;
 }
 
+/* ----- modal styles ----- */
+.modal .modal-content {
+	border-radius: 0;
+}
+
+.modal .modal-body {
+	padding: 50px;
+	background-color: #fff;
+}
+
+.modal .completionText {
+	text-align: center;
+	margin-bottom: 20px;
+	margin-bottom: 25px;
+	line-height: 35px;
+}
+
+.modal .buttonWrapper {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.modal button {
+	padding: 13px 25px;
+	border-radius: 25px;
+	color: #fff;
+	border: none;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+.modal .toPortfolioButton {
+	background-color: #efefef;
+	color: #333;
+}
+
+.modal .toPortfolioButton:hover {
+	background-color: #e3e3e3;
+}
+
+.modal .toReportButton {
+	background-color: #ffbc42;
+	color: #fff;
+	margin-right: 5px;
+}
+
+.modal .toReportButton:hover {
+	background-color: #FFB329;
+}
+
+.modal button:focus {
+	outline: none;
+}
+
 /* ----- content view styles ----- */
 .contentWrapper {
 	font-family: "Open Sans" !important;
@@ -277,6 +331,7 @@ table {
 /* ----- report view styles ----- */
 .reportWrapper {
 	font-family: 'Open Sans' !important;
+	padding-bottom: 75px;
 }
 
 .reportWrapper .container {
@@ -326,6 +381,8 @@ table {
 	text-align: center;
 	padding-top: 25px;
 	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .reportWrapper hr {
@@ -365,6 +422,23 @@ table {
 	background-color: #FFB329;
 }
 
+.reportWrapper .filterButton:focus {
+	outline: none;
+}
+
+.reportWrapper .resetFilterButton {
+	background-color: #fff;
+	color: #ffbc42;
+	border-radius: 30px;
+	padding: 7px 25px;
+	border: 2px solid #ffbc42;
+	font-weight: 400;
+}
+
+.reportWrapper .resetFilterButton:focus {
+	outline: none;
+}
+
 .reportWrapper .filterError {
 	color: #ff0000;
 	margin-bottom: 5px;
@@ -374,6 +448,7 @@ table {
 
 .reportWrapper .noFilterResults {
 	display: none;
+	margin-top: 40px;
 }
 
 @media (max-width: 1199px) {
@@ -395,12 +470,18 @@ table {
 		line-height: 32px;
 		margin-bottom: 30px;
 	}
+	.reportWrapper .dashboardBlock {
+		margin-bottom: 15px;
+	}
+	.reportWrapper hr {
+		margin-top: 60px;
+	}
 }
 
 @media (max-width: 767px) {
 	.contentWrapper .titleWrapper img {
 		width: 100%;
-		margin-top: 70px;
+		margin-top: 85px;
 		margin-bottom: 20px;
 	}
 	.contentWrapper .titleBreak {
@@ -413,5 +494,14 @@ table {
 	}
 	.contentWrapper .formBlock {
 		width: 100%;
+	}
+	.reportWrapper .filterInput {
+		width: 100%;
+	}
+	.reportWrapper .filterButton {
+		width: 49%;
+	}
+	.reportWrapper .resetFilterButton {
+		width: 49%;
 	}
 }

@@ -203,6 +203,25 @@ app.find('.nextButton4').on('click', function() {
 app.find('.nextButton5').on('click', function() {
 	var file = "http://summermichiko.github.io/tinCanTutorial/index.html#Hawaii_Food_Guide";
 	saveStatement(name, mbox, 'http://adlnet.gov/expapi/verbs/completed', file);
-	$(this).hide();
-	// link to other resources in addition to hiding the button
+	$('#tinCanModal').modal({
+		backdrop: 'static',
+		keyboard: false
+	});
 });
+
+// to report from modal
+app.on('click', '.toReportButton', function() {
+	window.open('http://summermichiko.github.io/gfExample/report.html#guide_report', '_blank');
+});
+
+
+// to portfolio from modal
+app.on('click', '.toPortfolioButton', function() {
+	window.open('http://summermcdonald.me/', '_blank');
+});
+
+
+
+
+
+

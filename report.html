@@ -21,27 +21,27 @@
 								<!-- <button class="refreshButton" onclick="window.location.reload()">Refresh</button> -->
 								<div class="dashboardWrapper">
 									<div class="row">
-										<div class="col-lg-2">
+										<div class="col-md-2 col-sm-4 col-xs-12">
 											<div class="dashboardBlock">
 												<p class="userCount"></p>
 											</div>
 										</div>
-										<div class="col-lg-2">
+										<div class="col-md-2 col-sm-4 col-xs-12">
 											<div class="dashboardBlock">
 												<p class="completeCount"></p>
 											</div>
 										</div>
-										<div class="col-lg-2">
+										<div class="col-md-2 col-sm-4 col-xs-12">
 											<div class="dashboardBlock">
 												<p class="qOneCount"></p>
 											</div>
 										</div>
-										<div class="col-lg-2">
+										<div class="col-md-2 col-sm-4 col-xs-12">
 											<div class="dashboardBlock">
 												<p class="qTwoCount"></p>
 											</div>
 										</div>
-										<div class="col-lg-2">
+										<div class="col-md-2 col-sm-4 col-xs-12">
 											<div class="dashboardBlock">
 												<p class="qThreeCount"></p>
 											</div>
@@ -57,7 +57,7 @@
 									<p class="filterError">Enter text to filter statements below.</p>
 									<input class="filterInput" type="text" placeholder="Filter Statements">
 									<button class="filterButton">Filter</button>
-									<!-- <button class="resetFilterButton">Reset Filter</button> -->
+									<button class="resetFilterButton">Reset Filter</button>
 								</div>
 							</div>
 						</div>
@@ -113,75 +113,70 @@
 							// additional pages of statements should be fetched
 						}
 						var row, fragment = $(document.createDocumentFragment());
-						console.log(sr.statements)
-						if (sr.statements.length == 0) {
-							$('.statementWrapper').html('There are no current statements.');
-						} else {
-							for(var i = 0; i < sr.statements.length; i++) {
-								var containsBool = userArr.indexOf(sr.statements[i].actor.name) > -1,
-									qOneTracker = sr.statements[i].target.id.indexOf('Question1') > -1,
-									qTwoTracker = sr.statements[i].target.id.indexOf('Question2') > -1,
-									qThreeTracker = sr.statements[i].target.id.indexOf('Question3') > -1;
-								if (!containsBool) {
-									userArr.push(sr.statements[i].actor.name);
-									userCount++;
-								}
-								if (qOneTracker) {
-									totalOne++;
-									if (sr.statements[i].target.id.indexOf('Japan') > -1) {
-										counterOne++;
-									}
-								}
-								if (qTwoTracker) {
-									totalTwo++;
-									if (sr.statements[i].target.id.indexOf('Roots') > -1) {
-										counterTwo++;
-									}
-								}
-								if (qThreeTracker) {
-									totalThree++;
-									if (sr.statements[i].target.id.indexOf('Carnivals') > -1) {
-										counterThree++;
-									}
-								}
-								row = $('.rowTemplate').clone();
-								var formattedDate = new Date(sr.statements[i].timestamp),
-									testDate = formattedDate.getDate(),
-									testMonth = formattedDate.getMonth(),
-									testYear = formattedDate.getFullYear(),
-									testTime = formattedDate.toTimeString();
-								row.find('.statementDate').text(testMonth + '-' + testDate + '-' + testYear + ' ' + testTime);
-								var str = sr.statements[i].verb.id,
-									n = str.lastIndexOf('/'),
-									result = str.substring(n+1),
-									finalStr;
-									if (result == 'loggedin') {
-										finalStr = 'logged in to';
-									} else if (result == 'interact') {
-										finalStr = 'interacted with';
-									} else if (result == 'start') {
-										finalStr = 'started';
-									} else {
-										finalStr = result;
-									}
-
-									if (finalStr === 'completed') {
-										completionCount++;
-									}
-
-								var url = sr.statements[i].target.id,
-									doc = url.lastIndexOf('#'),
-									cutUrl = url.substring(doc+1),
-									finalUrl = cutUrl.replace(/_/g,' ');
-
-									statementText = '<div class="statementItem">' + sr.statements[i].actor.name + ' ' + finalStr + ' ' + finalUrl + '</div>';
-
-								row.find('.statementText').html(statementText);
-								fragment.append(row);
+						for(var i = 0; i < sr.statements.length; i++) {
+							var containsBool = userArr.indexOf(sr.statements[i].actor.name) > -1,
+								qOneTracker = sr.statements[i].target.id.indexOf('Question1') > -1,
+								qTwoTracker = sr.statements[i].target.id.indexOf('Question2') > -1,
+								qThreeTracker = sr.statements[i].target.id.indexOf('Question3') > -1;
+							if (!containsBool) {
+								userArr.push(sr.statements[i].actor.name);
+								userCount++;
 							}
-							callbackFunc();
-							$('.statementWrapper').empty().append(fragment);
+							if (qOneTracker) {
+								totalOne++;
+								if (sr.statements[i].target.id.indexOf('Japan') > -1) {
+									counterOne++;
+								}
+							}
+							if (qTwoTracker) {
+								totalTwo++;
+								if (sr.statements[i].target.id.indexOf('Roots') > -1) {
+									counterTwo++;
+								}
+							}
+							if (qThreeTracker) {
+								totalThree++;
+								if (sr.statements[i].target.id.indexOf('Carnivals') > -1) {
+									counterThree++;
+								}
+							}
+							row = $('.rowTemplate').clone();
+							var formattedDate = new Date(sr.statements[i].timestamp),
+								testDate = formattedDate.getDate(),
+								testMonth = formattedDate.getMonth(),
+								testYear = formattedDate.getFullYear(),
+								testTime = formattedDate.toTimeString();
+							row.find('.statementDate').text(testMonth + '-' + testDate + '-' + testYear + ' ' + testTime);
+							var str = sr.statements[i].verb.id,
+								n = str.lastIndexOf('/'),
+								result = str.substring(n+1),
+								finalStr;
+								if (result == 'loggedin') {
+									finalStr = 'logged in to';
+								} else if (result == 'interact') {
+									finalStr = 'interacted with';
+								} else if (result == 'start') {
+									finalStr = 'started';
+								} else {
+									finalStr = result;
+								}
+
+								if (finalStr === 'completed') {
+									completionCount++;
+								}
+
+							var url = sr.statements[i].target.id,
+								doc = url.lastIndexOf('#'),
+								cutUrl = url.substring(doc+1),
+								finalUrl = cutUrl.replace(/_/g,' ');
+
+								statementText = '<div class="statementItem">' + sr.statements[i].actor.name + ' ' + finalStr + ' ' + finalUrl + '</div>';
+
+							row.find('.statementText').html(statementText);
+							fragment.append(row);
 						}
+						callbackFunc();
+						$('.statementWrapper').empty().append(fragment);
 					}
 				});
 			}
@@ -251,6 +246,7 @@
 
 			$('.resetFilterButton').on('click', function() {
 				$('.rowTemplate').show();
+				$('.filterError').hide();
 				$('.filterInput').val('');
 			});
 
