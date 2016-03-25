@@ -244,20 +244,33 @@ table {
 .contentWrapper .sectionTitle {
 	text-align: center;
 	margin-bottom: 25px;
+	font-size: 36px;
 }
 
 .contentWrapper hr {
 	width: 40px;
+	margin-bottom: 75px;
+	margin-top: 25px;
 }
 
 .contentWrapper .groupTitle {
 	font-weight: 700;
-	margin-top: 30px;
-	margin-bottom: 0px;
+	margin-top: 45px;
+	margin-bottom: 15px;
+	font-size: 21px;
+}
+
+.contentWrapper .mainImageWrapper {
+	text-align: center;
+}
+
+.contentWrapper .mainImageWrapper img {
+	width: 100%;
 }
 
 .contentWrapper .contentText {
-	line-height: 27px;
+	line-height: 33px;
+	font-size: 21px;
 }
 
 .contentWrapper .placesList li img {
