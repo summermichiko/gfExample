@@ -3,9 +3,9 @@ var app = $('.tinCanTutorial'), name, mbox, lrs, score = 0, comment = "";
 // lets you test a block of code for errors
 try {
 	lrs = new TinCan.LRS({
-		endpoint: "https://cloud.scorm.com/tc/L12DQVVPBO/",
-		username: "L12DQVVPBO",
-		password: "FHo0S01l3EzN1ZCoDvYBwRFHQgPjw2pHe4xC0Zsi",
+		endpoint: "https://cloud.scorm.com/tc/GB45KB7G2P/",
+		username: "GB45KB7G2P",
+		password: "oBVMlKklLtET2HQ969n4WYkYOAmn4vOUP9BFSkWX",
 		allowFail: false
 	});
 }
