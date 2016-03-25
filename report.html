@@ -55,7 +55,7 @@
 							<div class="col-xs-12">
 								<div class="filterWrapper">
 									<p class="filterError">Enter text to filter statements below.</p>
-									<input class="filterInput" type="text" placeholder="Filter Statements">
+									<input class="filterInput" type="text" placeholder="Search by student name, verb, or section">
 									<button class="filterButton">Filter</button>
 									<button class="resetFilterButton">Reset Filter</button>
 								</div>
@@ -206,7 +206,7 @@
 
 			function populateCompleteCount() {
 				var completionPercentage = Math.round((completionCount/userCount) * 100);
-				$('.completeCount').html('<b>Total Guide Completion: </b><br><span style="font-size: 40px; color: #d81159;">' + completionPercentage + '%' + '</span>');
+				$('.completeCount').html('<b>Guide Completion: </b><br><span style="font-size: 40px; color: #d81159;">' + completionPercentage + '%' + '</span>');
 			}
 
 			function calculateQuestionOne() {
