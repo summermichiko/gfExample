@@ -96,6 +96,12 @@ table {
 	background-color: #ffbc42;
 	color: #fff;
 	margin-right: 5px;
+	display: block;
+	margin-top: -20px;
+	margin-bottom: 25px;
+	width: 450px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .modal .toReportButton:hover {
@@ -549,10 +555,12 @@ table {
 	}
 	.modal .toReportButton {
 		margin-right: 0;
+		margin-bottom: 0;
+		width: 100%;
 	}
 	.modal .toPortfolioButton {
 		display: block;
-		margin-top: 25px;
+		margin-top: 10px;
 		width: 225px;
 		margin-left: auto;
 		margin-right: auto;
