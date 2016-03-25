@@ -61,7 +61,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="row rowTemplate">
+						<div class="row rowTemplate" style="display: none;">
 							<div class="col-lg-3">
 								<div class="statementDate"></div>
 							</div>
@@ -141,6 +141,7 @@
 								}
 							}
 							row = $('.rowTemplate').clone();
+							row.css('display', 'block');
 							var formattedDate = new Date(sr.statements[i].timestamp),
 								testDate = formattedDate.getDate(),
 								testMonth = formattedDate.getMonth(),
@@ -250,6 +251,7 @@
 				$('.rowTemplate').show();
 				$('.filterError').hide();
 				$('.filterInput').val('');
+				$('.noFilterResults').hide();
 			});
 		</script>
 	</body>

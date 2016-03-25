@@ -401,7 +401,7 @@ table {
 }
 
 .reportWrapper .filterWrapper {
-	margin-bottom: 0px;
+	margin-bottom: 25px;
 }
 
 .reportWrapper .filterInput {
@@ -458,7 +458,7 @@ table {
 
 .reportWrapper .noFilterResults {
 	display: none;
-	margin-top: 40px;
+	margin-top: 5px;
 }
 
 @media (max-width: 1199px) {
