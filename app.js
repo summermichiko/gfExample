@@ -202,11 +202,14 @@ app.find('.nextButton4').on('click', function() {
 			score++;
 		}
 		if (score < 2) {
-			comment = "Sorry, next time.";
+			comment = "Ouch! Keep studying.";
+			$('.iframeWrapper').html('<iframe src="https://giphy.com/embed/ZeB4HcMpsyDo4" width="480" height="303" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>');
 		} else if (score === 2) {
-			comment = "You're almost there!";
+			comment = "You were so close!";
+			$('.iframeWrapper').html('<iframe src="https://giphy.com/embed/kcuLB9VqHssy4" width="480" height="366" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>');
 		} else if (score === 3) {
-			comment = "Great job!";
+			comment = "Perfect score! You did it.";
+			$('.iframeWrapper').html('<iframe src="https://giphy.com/embed/5nAQJljp31ztC" width="480" height="335" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>');
 		}
 
 		var file1 = "http://summermichiko.github.io/tinCanTutorial/index.html#Hawaii_Food_Guide_Quiz_Question1_with_'" + q1Val + "'";
