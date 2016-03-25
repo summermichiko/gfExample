@@ -522,8 +522,8 @@ table {
 		margin-bottom: 30px;
 	}
 	.reportWrapper .refreshButton {
-		float: right;
-		margin-top: -50px;
+		margin-top: -20px;
+		margin-bottom: 40px;
 	}
 	.reportWrapper .filterInput {
 		width: 100%;
