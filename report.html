@@ -231,6 +231,10 @@
 				calculateQuestionThree();
 			});
 
+			$('.refreshButton').on('click', function() {
+				window.location.reload();
+			});
+
 			$('.filterButton').on('click', function() {
 				$('.statementItem').show();
 				var filterInputVal = $('.filterInput').val();
